@@ -18,7 +18,7 @@ The function should:
 function createMenuItem(name, price, category){
   return {name, price, category}
 }
-// console.log('task 1a', createMenuItem('tacos', 8, 'Lunch'));
+console.log('task 1a', createMenuItem('tacos', 8, 'Lunch'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -30,9 +30,9 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
  
-// console.log('task 1b', createMenuItem('pizza', 3, 'Lunch'));
-// console.log('task 1b', createMenuItem('ice cream', 6, 'Dessert'));
-// console.log('task 1b', createMenuItem('tacos', 7, 'Dinner'));
+console.log('task 1b', createMenuItem('pizza', 3, 'Lunch'));
+console.log('task 1b', createMenuItem('ice cream', 6, 'Dessert'));
+console.log('task 1b', createMenuItem('tacos', 7, 'Dinner'));
 
 
 
@@ -48,20 +48,20 @@ Using the burger object below do the following:
 
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
-// const burger = {
-//   name: "Burger", 
-//   price: 18, 
-//   category: "Lunch", 
-//   discount: function {
-//     if (person === 'teacher') {
-//       return this.price
-//     }
+const burger = {
+  name: "Burger", 
+  price: 18, 
+  category: "Lunch", 
+  discount: function(person) {
+    if (person === 'teacher' || person === 'student') {
+      return this.price - (this.price * 0.25);
+    } else if (person === 'public') {
+      return this.price - (this.price * 0.1);
+    }
+  }
+}
 
-//   }
-// }
-
-
-// console.log('task 2:', burger)
+console.log('task 2:', burger.discount('teacher'));
 
 
 
@@ -70,7 +70,7 @@ const reviews = [
     {name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
     {name: "Jack", rating: 3, feedback:"A little too hipster for my taste, but the burger was decent, if overpriced"},
     {name: "Miranda", rating: 4, feedback:"fun trivia and cool vibes"},
-    {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
+    {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly recommend."},
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." },
     {name: "Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."},
@@ -81,6 +81,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
+
 console.log('task 3:', reviews[5].feedback);
 
 
@@ -89,6 +90,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
+
 reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
 console.log('task 4:', reviews);
 
@@ -158,14 +160,14 @@ Use the getReviewsByRating function below to do the following:
   For example: getReviewByRating(reviews, 4) would return these reviews in the 4 range (4-4.9):
   [
     {name: "Miranda", rating: 4, feedback:"fun trivia and cool vibes"},
-    {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
+    {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly recommend."},
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}
   ]
 */
 
-//  function getReviewByRating(/* code here */) {
-//     /* code here */
-//   }
+ function getReviewByRating(/* code here */) {
+    /* code here */
+  }
 
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
@@ -175,15 +177,15 @@ Use the getLongReviews function below to do the following:
 
   For example: getLongReviews(reviews) would return:
   [
-    {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
+    {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly recommend."},
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." }
   ]
 */
 
-// function getLongReviews(/* code here */) {
-//     /* code here */
-//   }
+function getLongReviews(/* code here */) {
+    /* code here */
+  }
   
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
@@ -204,10 +206,10 @@ Use the carMaker function below to do the following:
 */
 
 
-// function carMaker(/* code here */) {
-//     /* code here */
+function carMaker(/* code here */) {
+    /* code here */
     
-// }
+}
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
@@ -218,7 +220,7 @@ function foo(){
 module.exports = {
   foo,
   createMenuItem,
-  // burger,
+  burger,
   addReview,
   getReviewByIndex,
   getLastReview,
