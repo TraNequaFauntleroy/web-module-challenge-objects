@@ -18,7 +18,7 @@ The function should:
 function createMenuItem(name, price, category){
   return {name, price, category}
 }
-console.log('task 1a', createMenuItem('tacos', 8, 'Lunch'));
+// console.log('task 1a', createMenuItem('tacos', 8, 'Lunch'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -30,9 +30,9 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
  
-console.log('task 1b', createMenuItem('pizza', 3, 'Lunch'));
-console.log('task 1b', createMenuItem('ice cream', 6, 'Dessert'));
-console.log('task 1b', createMenuItem('tacos', 7, 'Dinner'));
+// console.log('task 1b', createMenuItem('pizza', 3, 'Lunch'));
+// console.log('task 1b', createMenuItem('ice cream', 6, 'Dessert'));
+// console.log('task 1b', createMenuItem('tacos', 7, 'Dinner'));
 
 
 
@@ -48,12 +48,20 @@ Using the burger object below do the following:
 
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
-const burger = {
-  name: "Burger", 
-  price: 18, 
-  category: "Lunch", 
-  
-}
+// const burger = {
+//   name: "Burger", 
+//   price: 18, 
+//   category: "Lunch", 
+//   discount: function {
+//     if (person === 'teacher') {
+//       return this.price
+//     }
+
+//   }
+// }
+
+
+// console.log('task 2:', burger)
 
 
 
@@ -82,8 +90,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
-console.log(reviews);
-
+console.log('task 4:', reviews);
 
 
 
@@ -96,9 +103,11 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
+function addReview(array, name, rating, feedback){
+  array.push({name, rating, feedback});
+  return array
 }
+console.log('task 5:', addReview(reviews, 'Daniela', 5, 'Beautiful atmosphere and wonderful vegan options!'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -111,9 +120,10 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(array, num) {
+  return `${array[num].name} gave the restaurant a ${array[num].rating} star review, and their feedback was: ${array[num].feedback}`
 }
+console.log('task 6:', getReviewByIndex(reviews, 3));
 
 
   
@@ -130,9 +140,10 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(array) {
+  return `${array[array.length-1].name} gave the restaurant a ${array[array.length-1].rating} star review, and their feedback was: ${array[array.length-1].feedback}`;
 } 
+console.log('task 7:', getLastReview(reviews));
 
 
 
@@ -152,9 +163,9 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
-  }
+//  function getReviewByRating(/* code here */) {
+//     /* code here */
+//   }
 
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
@@ -170,9 +181,9 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
-  }
+// function getLongReviews(/* code here */) {
+//     /* code here */
+//   }
   
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
@@ -193,10 +204,10 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
+// function carMaker(/* code here */) {
+//     /* code here */
     
-}
+// }
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
@@ -207,7 +218,7 @@ function foo(){
 module.exports = {
   foo,
   createMenuItem,
-  burger,
+  // burger,
   addReview,
   getReviewByIndex,
   getLastReview,
